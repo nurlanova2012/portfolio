@@ -5,19 +5,19 @@ import {PortfolioCatItems} from "../index"
 
 function Portfolio() {
 const [selected, setSelected] = useState("featured");
-const [data, setDate] = useState([]);
+const [data, setData] = useState([]);
 
 
 useEffect(()=> {
     switch(selected) {
         case 'web apps':
-            setDate(webApps);
+            setData(webApps);
             break;
         case 'react apps':
-            setDate(reactApps);
+            setData(reactApps);
             break;
         default:
-            setDate(featured);
+            setData(featured);
             break;
     }
 

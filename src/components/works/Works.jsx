@@ -45,7 +45,8 @@ function Works() {
            <div className="works__slider" 
            style ={{transform: `translateX(-${currentSlide * 100}vw)`}}>
                {sliderData.map((dataItem)=> (
-                         <div className="works__slider-inner">
+                         <div className="works__slider-inner"
+                         key={`${dataItem.title}_${dataItem.id}`}>
                          <div className="works__slider-item">
                              <div className="works__slider-left">
                                  <div className="works__slider-left-container">
@@ -67,11 +68,11 @@ function Works() {
                ))};
            </div>
            <button className="works__slider-btn works__slider-btn-prev">
-               <ArrowBackIosIcon class="works__slider-arrow" onClick={()=> 
+               <ArrowBackIosIcon className="works__slider-arrow" onClick={()=> 
             handleClick("prev")}/>
            </button>
            <button className="works__slider-btn works__slider-btn-next">
-               <ArrowForwardIosIcon class="works__slider-arrow" onClick={()=> 
+               <ArrowForwardIosIcon className="works__slider-arrow" onClick={()=> 
             handleClick("next")}/>
            </button>
     
